@@ -1,20 +1,21 @@
-<?php 
+<?php
 
-require 'modele/modele.php';
+include(dirname(__FILE__).'/../modele/modele.php');
 
 if(empty($_POST['date'])){
 	$var=$_POST['id'];
 	
-	require 'vue/vueChoixDate.php';
+	include(dirname(__FILE__).'/../vue/vueChoixDate.php');
+
 }else{
 
 	$date=$_POST['date'];
 	$id=$_POST['id'];
 
-	$chambre = recupChambreDifferentDate($id,$date);
+	$chambre2 = recupChambreDifferentDate($id,$date);
 
-	$chambre2 = recupChambrePasDansReservation($id);
-
+	$chambre = recupChambrePasDansReservation($id);
+	
 	$a = 0;
 	$b = 0;
 	while($donnees = $chambre->fetch()){ 
@@ -38,6 +39,10 @@ if(empty($_POST['date'])){
 		}
 	}
 
-	require 'vue/vueChoixCategorie.php';
+	$prixCat1 = recupPrixChambre(1);
+	$prixCat2 = recupPrixChambre(2);
+
+	include(dirname(__FILE__).'/../vue/vueChoixCategorie.php');
 }
+
 ?>

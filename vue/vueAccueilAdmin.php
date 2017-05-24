@@ -15,20 +15,12 @@
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="../js/materialize.min.js"></script>
 
-		<?php include("header.php"); ?>
+		<?php include("headerAdmin.php"); ?>
 
-		<div class="container">
-			<div class="section">
-				<p>Bonjour <?php echo $prenom.' '.$nom; ?> <br/></p> 
-				<p>Vous avez effectué une réservation pour la nuit du <?php echo $date; ?> <br/></p>
-				<p>Veuillez conservez le numero de réservation : <?php echo $idReservation; ?> <br/></p>
-				<p>Cordialement. Hotel Bonnier<br/></p>
-				<p>Le prix est de : <?php echo $prix; ?> </p>
-
-			</div>
-		</div>
-
+	    <a href="#">Ajouter une chambre</a><br />
+		<a href="../controleur/controleurReservationAccueilAdmin.php">Consulter les reservations</a><br />
+		<a href="../controleur/controleurClientAccueilAdmin.php">Consulter la liste des clients</a><br />
 
 		<?php include("footer.php"); ?>
-	</body>
+</body>
 </html>

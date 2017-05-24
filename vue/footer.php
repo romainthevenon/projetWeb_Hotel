@@ -6,8 +6,8 @@
                 <p class="grey-text text-lighten-4">Le groupe Bonnier est à votre écoute et prêt a satisfaire tous vos besoins.</p>
               </div>
               <div class="col l4 offset-l2 s12">
-                <a class="grey-text text-lighten-3" href="https://www.facebook.com/"><img src="img/facebook.png" alt="icone" /></a>
-                <a class="grey-text text-lighten-3" href="https://twitter.com/"><img src="img/twitter.png" alt="icone" /></a>
+                <a class="grey-text text-lighten-3" href="https://www.facebook.com/"><img src="../img/facebook.png" alt="icone" /></a>
+                <a class="grey-text text-lighten-3" href="https://twitter.com/"><img src="../img/twitter.png" alt="icone" /></a>
               </div>
             </div>
           </div>

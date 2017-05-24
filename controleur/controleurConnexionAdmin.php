@@ -1,10 +1,14 @@
 <?php 
 
+include(dirname(__FILE__).'/../modele/modele.php');
+
 $nom = $_POST['nom'];
 $mdp = $_POST['mdp'];
 
 if($nom=="admin" AND $mdp=="123" ){
-	require 'vue/vueAdministrateur.php';
+	include(dirname(__FILE__).'/../vue/vueAccueilAdmin.php');
 }else{
-	require 'index.php';
+	include(dirname(__FILE__).'/../index.php');
 }
+
+?>

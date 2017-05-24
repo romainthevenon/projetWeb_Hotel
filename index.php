@@ -1,13 +1,5 @@
-<!-- Acces base de données -->
-<?php 
-require ('controleur/controleur.php');
+<?php
 
-try {
-	accueil();
-}
-catch (Exception $e) {
-	echo '<html><body>Erreur ! '.$e->getMessage().'</body></html>';
-}
+include('controleur/index.php');
 
 ?>
-

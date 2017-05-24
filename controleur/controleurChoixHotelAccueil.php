@@ -1,6 +1,6 @@
 <?php 
 
-require '../modele/modele.php';
+include(dirname(__FILE__).'/../modele/modele.php');
 
 $var = $_POST['id'];
 $chambre = recupChambres($var);
@@ -16,8 +16,5 @@ while($donnees = $chambre->fetch()){
 	}
 }
 
-require '../vue/vueChoixDate.php';
-
+include(dirname(__FILE__).'/../vue/vueChoixDate.php');
 ?>
-
-
