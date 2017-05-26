@@ -16,15 +16,22 @@
       <script type="text/javascript" src="../js/materialize.min.js"></script>
 
 		<?php include("header.php"); ?>
-
+		
 		<div class="container">
 			<div class="section">
-				<p>Bonjour <?php echo $prenom.' '.$nom; ?> <br/></p> 
-				<p>Vous avez effectué une réservation pour la nuit du <?php echo $date; ?> <br/></p>
-				<p>Veuillez conservez le numero de réservation : <?php echo $idReservation; ?> <br/></p>
-				<p>Cordialement. Hotel Bonnier<br/></p>
-				<p>Le prix est de : <?php echo $prix; ?> </p>
-
+				<div class="row">
+					<div class="col s8 m6">
+						<p>Bonjour <?php echo $prenom.' '.$nom; ?> <br/></p> 
+						<p>Vous avez effectué une réservation pour la nuit du <?php echo $date; ?> <br/></p>
+						<p>Veuillez conservez le numero de réservation : <?php echo $idReservation; ?> <br/></p>
+						<p>Le prix est de : <?php echo $prix; ?> €</p>
+						<p>Cordialement. Hotel Bonnier<br/></p>
+						<a class="waves-effect waves-light btn" id="impression" name="impression" type="button" onclick="imprimer_page()" value="Imprimer cette page">Imprimer page</a>
+					</div>
+					<div class="col s8 m6">
+						<a class="waves-effect waves-light btn" href="../index.php">Retour accueil</a>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -32,3 +39,9 @@
 		<?php include("footer.php"); ?>
 	</body>
 </html>
+
+<script type="text/javascript">
+function imprimer_page(){
+  window.print();
+}
+</script>

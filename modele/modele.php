@@ -7,7 +7,27 @@
 		return $hotels;
 	}
 
-	function recupReservationSelonID($idHotel){
+	function getCategorie() {
+		$bdd = getBdd();
+		$categorie = $bdd->query('SELECT * FROM categorie');
+		return $categorie;
+	}
+
+	function recupHotelDonne($idHotel){
+		$bdd = getBdd();
+		$hotel = $bdd->query('SELECT * FROM hotel WHERE idHotel = '.$idHotel.'');
+		$res = $hotel->fetch();
+		return $res;
+	}
+
+	function recupReservationSelonIDReservation($idReservation){
+		$bdd = getBdd();
+		$reservation = $bdd->query('SELECT * FROM reservation WHERE idReservation = '.$idReservation.'');
+		$res = $reservation->fetch();
+		return $res;
+	}	
+
+	function recupReservationSelonIDHotel($idHotel){
 		$bdd = getBdd();
 		$reservation = $bdd->query('SELECT * FROM reservation WHERE idHotel = '.$idHotel.'');
 		return $reservation;	
@@ -108,7 +128,7 @@
 	//Effectue la connexion à la BDD
 	function getBdd() {
 		/* $bdd = new PDO('mysql:host=localhost;dbname=test_projet;charset=utf8','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); */
-		 $bdd = new PDO('mysql:host=mysql.hostinger.fr;dbname=u831133719_hotel','u831133719_bonni','23Se1996',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));  
+		 $bdd = new PDO('mysql:host=mysql.hostinger.fr;dbname=u831133719_hotel','u831133719_bonni','23Se1996',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));   
 		return $bdd;
 	}
 

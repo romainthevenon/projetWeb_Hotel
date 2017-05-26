@@ -16,24 +16,41 @@
       <script type="text/javascript" src="../js/materialize.min.js"></script>
 
 		<?php include('header.php'); ?>
-		<div class="row">
-			<h3> Details a venir </h3>
-		  <div class="row">
-		    <form method="POST" action="controleurChoixDate.php">
-		      <div class="row">
-		      <p> Choissisez une date de reservation </p>
-		        <div class="input-field col s4">
-				  <input name="date" type="date">
-		        </div>
-		      </div>
-		      <input type="hidden" name="id" value="<?php  echo ' '.$var.' ' ?>" />
-		      <button class="btn waves-effect waves-light" type="submit" value="valider">Envoyer
-    		  		<i class="material-icons right">send</i>
-  			  </button>
-		    </form>
-		 </div>
+		<div class="container">
+		    <div class="section">
+				<div class="row">
+					<div class="col s8 m6">
+						<h4>Hotel Bonnier</h4>
+						<p>Le groupe Bonnier fondé en 1990, met en oeuvre toutes ses ressources, pour vous procurez un séjour inoubliable.</p>
+						<p>De père en fils, nos différents hotels 4 étoiles, vous permettrons de passer une nuit dans les étoiles, avec un personnel qui sera vous rendre la vie plus facile.</p>
+						<img class="responsive-img" src="../img/descriptionHotel.jpg" alt="accueil de l'hotel" />
+					</div>
+					<div class="col s8 m6">
+					    <form method="POST" action="../controleur/controleurChoixDate.php">
+					    	<input type="hidden" name="id" value="<?php echo $var; ?>">
+					    	<div class="row">
+					    		<div class="input-field col s8">
+					        		<p> Choissisez une date de reservation </p>
+									<input name="date" type="date">
+					        	</div>
+					        </div>
+					        <button class="btn waves-effect waves-light" type="submit" value="valider">Envoyer
+			    		  		<i class="material-icons right">send</i>
+			  			    </button>
+					    </form>
+					</div>
+				</div>
+			</div>
+		</div>
+
 
 
 		<?php include('footer.php'); ?>
 	</body>
 </html>
+<?php
+if($a==True){ ?>
+<script type="text/javascript">
+		 Materialize.toast('Veuillez choisir une date correcte !', 4000) // 4000 is the duration of the toast
+</script>
+<?php } ?>

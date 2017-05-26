@@ -2,19 +2,19 @@
 <header>
 	<nav>
 	    <div class="nav-wrapper">
-	      <a href="vueAdministrateur.php" class="brand-logo">Hotel Bonnier</a>
+	      <a href="controleurConnexionAdmin.php" class="brand-logo">Hotel Bonnier</a>
 	      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 	      <ul class="right hide-on-med-and-down">
 	        <li><a href="../index.php">Se deconnecter</a></li>
-	        <li><a href="../vue/vueAccueilAdmin.php">Accueil</a></li>
-	        <li><a href="#">Ajouter Chambre</a></li>
+	        <li><a href="../controleur/controleurConnexionAdmin.php">Accueil</a></li>
+	        <li><a href="../controleur/controleurmodifierAccueilAdmin.php">Modifier prix</a></li>
 	        <li><a href="../controleur/controleurReservationAccueilAdmin.php">Consulter Reservations</a></li>
 	        <li><a href="../controleur/controleurClientAccueilAdmin.php">Consulter Clients</a></li>
 	      </ul>
 	      <ul class="side-nav" id="mobile-demo">
-	        <li><a href="index.php">Se deconnecter</a></li>
-	        <li><a href="../vue/vueAccueilAdmin.php">Accueil</a></li>
-	        <li><a href="#">Ajouter Chambre</a></li>
+	        <li><a href="../controleur/controleurDeconnexionAdmin.php">Se deconnecter</a></li>
+	        <li><a href="../controleur/controleurConnexionAdmin.php">Accueil</a></li>
+	        <li><a href="../controleur/controleurmodifierAccueilAdmin.php">Modifier prix</a></li>
 	        <li><a href="../controleur/controleurReservationAccueilAdmin.php">Consulter Reservations</a></li>
 	        <li><a href="../controleur/controleurClientAccueilAdmin.php">Consulter Clients</a></li>
 	      </ul>

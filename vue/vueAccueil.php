@@ -24,12 +24,12 @@
 			      <ul class="right hide-on-med-and-down">
 			        <li><a href="index.php">Accueil</a></li>
 			        <li><a href="controleur/controleurAdminAccueil.php">Administrateur</a></li>
-			        <li><a href="#">Contact</a></li>
+			        <li><a href="controleur/controleurContact.php">Contact</a></li>
 			      </ul>
 			      <ul class="side-nav" id="mobile-demo">
 			        <li><a href="index.php">Accueil</a></li>
 			        <li><a href="controleur/controleurAdminAccueil.php">Administrateur</a></li>
-			        <li><a href="#">Contact</a></li>
+			        <li><a href="controleur/controleurContact.php">Contact</a></li>
 			      </ul>
 			    </div>
 			</nav>
@@ -44,29 +44,30 @@
 			    <a class="carousel-item" href="#two!"><img src="img/hotel6.jpg"></a>
 		</div>
 
-		  <div class="container">
+		<!--Corps de la page -->
+		<div class="container">
 		    <div class="section">
-
-		      <!--   Icon Section   -->
-		      <div class="row">
-		      <h2 class="center brown-text"> Choissisez l'hotel dans lequel vous voulez effectuer une réservation </h2>
-		      <?php while($donnees = $hotels->fetch()){ ?>
-		        <div class="col s12 m4">
-		          <div class="icon-block">
-		        <!--    <h2 class="center brown-text"><img src="img/icone.png" alt="icone" /></h2> -->
-						<p class="light"> <?php 
-							echo 'Vous pouvez reserver dans l\'hotel '.$donnees['nom'].' se trouvant à '.$donnees['ville'].'. L\'adresse exacte est '.$donnees['adresse'].' '.$donnees['codePostal'].' '.$donnees['ville'].'.<br/>Vous pouvez appeller au '.$donnees['numTel'].'.';
-						?> </p>
-							<form method="POST" action="controleur/controleurChoixHotelAccueil.php">
-							<input type="hidden" name="id" value="<?php  echo ' '.$donnees['idHotel'].' ' ?>" />
-							<input type="submit" value="Reserver" />
-						</form> 
-		          </div>
+		    	<div class="row">
+		    		<h2 class="center brown-text"> Choissisez l'hotel dans lequel vous voulez effectuer une réservation </h2>
+		      		<?php while($donnees = $hotels->fetch()){ ?>
+		        		<div class="col s12 m4">
+		          			<div class="card horizontal">
+		          			    <div class="card-stacked">
+        					    	<div class="card-content">
+										<p class="light"> <?php 
+											echo 'Vous pouvez reserver dans l\'hotel '.$donnees['nom'].' se trouvant à '.$donnees['ville'].'. L\'adresse exacte est '.$donnees['adresse'].' '.$donnees['codePostal'].' '.$donnees['ville'].'.<br/>Vous pouvez appeller au '.$donnees['numTel'].'.';
+										?> </p>
+									</div>								
+									<div class="card-action">
+										<a class="waves-effect waves-teal btn-flat" href="controleur/controleurChoixHotelAccueil.php?id=<?php echo $donnees['idHotel']; ?>">Reserver</a>
+									</div>
+								</div>
+				            </div>
+		        		</div>
+		     		<?php } ?>
 		        </div>
-		       <?php } ?>
-		      </div>
-		     </div>
-		     </div>
+		    </div>
+		</div>
 
 	<!-- Bas de page -->
 	        <footer class="page-footer">

@@ -17,9 +17,52 @@
 
 		<?php include("headerAdmin.php"); ?>
 
-	    <a href="#">Ajouter une chambre</a><br />
-		<a href="../controleur/controleurReservationAccueilAdmin.php">Consulter les reservations</a><br />
-		<a href="../controleur/controleurClientAccueilAdmin.php">Consulter la liste des clients</a><br />
+		<div class="container">
+		    <div class="section">
+		    	<div class="row">
+			    	<h4>Que voulez-vous faire ? </h4>
+			        	<div class="col s12 m4">
+			          		<div class="card horizontal">
+			          			<div class="card-stacked">
+	        				    	<div class="card-content">
+	        				    		<p class="light"> Vous pouvez modifier le prix de la catégorie </p>
+	        				    	</div>	
+	        				    	<div class="card-action">
+										<a class="waves-effect waves-teal btn-flat" href="../controleur/controleurmodifierAccueilAdmin.php">Modifier prix</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+			        	<div class="col s12 m4">
+			          		<div class="card horizontal">
+			          			<div class="card-stacked">
+	        				    	<div class="card-content">
+	        				    		<p class="light"> Vous pouvez consulter les réservations en fonction de l'hotel choisi </p>
+	        				    	</div>	
+	        				    	<div class="card-action">
+										<a class="waves-effect waves-teal btn-flat" href="../controleur/controleurReservationAccueilAdmin.php">Consulter réservations</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+			        	<div class="col s12 m4">
+			          		<div class="card horizontal">
+			          			<div class="card-stacked">
+	        				    	<div class="card-content">
+	        				    		<p class="light"> Vous pouvez consulter la liste des clients </p>
+	        				    	</div>	
+	        				    	<div class="card-action">
+										<a class="waves-effect waves-teal btn-flat" href="../controleur/controleurClientAccueilAdmin.php">Consulter clients</a>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+
 
 		<?php include("footer.php"); ?>
 </body>

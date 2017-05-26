@@ -20,12 +20,14 @@
       		<div class="section">
 				<div class="row">
 				    <div class="input-field col s12">
-						<table>
+						<table class="bordered responsive-table">
 							<tr>
 								<td> idReservation </td>
 								<td> Date de reservation </td>
 								<td> numero de chambre </td>
-								<td> numero du client </td>
+								<td> nom du client </td>
+								<td></td>
+								<td></td>
 							</tr>
 					    <?php while($donnees = $reservation->fetch()){ ?>
 					    	<tr>
@@ -33,7 +35,8 @@
 					    		<td><?php echo $donnees['DateReservation']; ?></td>
 					    		<td><?php echo $donnees['numChambre']; ?></td>
 					    		<td><?php echo $donnees['numClient']; ?></td>
-					    		<td><a href="supprimReservation.php?id=<?php echo $donnees['idReservation']; ?>" class="waves-effect waves-light btn">Supprimer</a></td>
+						    		<td><a href="controleurClientReservationAdmin.php?id=<?php echo $donnees['idReservation']; ?>" class="waves-effect waves-light btn">Consulter Facture</a></td>
+						    		<td><a href="controleurSupprimReservation.php?id=<?php echo $donnees['idReservation']; ?>" class="waves-effect waves-light btn">Supprimer</a></td>
 					    	</tr>
 					    <?php } ?>
 					    </table>
@@ -46,3 +49,6 @@
 		<?php include("footer.php"); ?>
 </body>
 </html>
+
+
+

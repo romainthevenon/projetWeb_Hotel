@@ -7,12 +7,12 @@
 	      <ul class="right hide-on-med-and-down">
 	        <li><a href="../index.php">Accueil</a></li>
 	        <li><a href="../controleur/controleurAdminAccueil.php">Administrateur</a></li>
-	        <li><a href="#">Contact</a></li>
+	        <li><a href="../controleur/controleurContact.php">Contact</a></li>
 	      </ul>
 	      <ul class="side-nav" id="mobile-demo">
 	        <li><a href="../index.php">Accueil</a></li>
 	        <li><a href="../controleur/controleurAdminAccueil.php">Administrateur</a></li>
-	        <li><a href="#">Contact</a></li>
+	        <li><a href="../controleur/controleurContact.php">Contact</a></li>
 	      </ul>
 	    </div>
 	</nav>

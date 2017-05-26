@@ -18,31 +18,16 @@
 		<?php include("headerAdmin.php"); ?>
     	<div class="container">
       		<div class="section">
-				<div class="row">
-						<table class="bordered responsive-table">
-							<tr>
-								<td> Prenom </td>
-								<td> Nom </td>
-								<td> Adresse </td>
-								<td> Code Postal </td>
-								<td> Ville </td>
-								<td> Numero de telephone </td>
-							</tr>
-					    <?php while($donnees = $client->fetch()){ ?>
-					    	<tr>
-					    		<td><?php echo $donnees['prenom']; ?></td>
-					    		<td><?php echo $donnees['nom']; ?></td>
-					    		<td><?php echo $donnees['adresse']; ?></td>
-					    		<td><?php echo $donnees['codePostal']; ?></td>
-					    		<td><?php echo $donnees['ville']; ?></td>
-					    		<td><?php echo $donnees['numTel']; ?></td>
-					    	</tr>
-					    <?php } ?>
-					    </table>
-				</div>
-			</div>	
-		</div>
-
+      			<div class="row">
+      				<h4>FACTURE N° <?php echo $idReservation; ?></h4>
+      				<h5>Client :</h5>
+      				<p>Le client est <?php echo $client['prenom']; ?> <?php echo $client['nom']; ?> habitant à <?php echo $client['adresse']; ?> <?php echo $client['codePostal']; ?> <?php echo $client['ville']; ?>. </p>
+      				<h5>Reservation :</h5>
+      				<p>La réservation concerne la chambre <?php echo $reservation['numChambre']; ?> de l'hôtel <?php echo $hotel['nom']; ?> à <?php echo $hotel['adresse']; ?> <?php echo $hotel['codePostal']; ?> <?php echo $hotel['ville']; ?>.</p>
+      				</div>
+      			</div>
+      		</div>
+      	</div>
 
 		<?php include("footer.php"); ?>
 </body>

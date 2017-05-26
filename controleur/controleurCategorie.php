@@ -1,17 +1,16 @@
 <?php
 
+
 include(dirname(__FILE__).'/../modele/modele.php');
 
 $service = recupServices();
-$idHotel = $_POST['idHotel'];
+if(isset($_GET['idHotel']) AND isset($_GET['date']) AND isset($_GET['numChambre'])){
+	$idHotel = $_GET['idHotel'];
+	$date=$_GET['date'];
+	$numChambre=$_GET['numChambre'];
 
-$date=$_POST['date'];
-if(empty($_POST['numChambre'])){
-	$numChambre=$_POST['numChambre2'];
-}else{
-	$numChambre=$_POST['numChambre'];
+	$a=False;
+	include(dirname(__FILE__).'/../vue/vueRenseignement.php');
 }
-
-include(dirname(__FILE__).'/../vue/vueRenseignement.php');
 
 ?>

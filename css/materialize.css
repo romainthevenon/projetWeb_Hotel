@@ -31,14 +31,6 @@ nav a {
 } */
 
 
-.icon-block {
- border-width:1px;
- border-style:solid;
- border-color:black;
- border-radius: 10px;
- padding: 5px 5px 5px 5px;
- background-color: #F1F692;
-}
 
 /*!
  * Materialize v0.98.2 (http://materializecss.com)
@@ -2574,6 +2566,7 @@ table {
 td,
 th {
   padding: 0;
+
 }
 
 html {
@@ -2923,12 +2916,13 @@ ul.staggered-list li {
 }
 
 table, th, td {
-  border: none;
+    border : none;
 }
 
 table {
   width: 100%;
   display: table;
+
 }
 
 table.bordered > thead > tr,
@@ -4726,7 +4720,7 @@ small {
 .card {
   position: relative;
   margin: 0.5rem 0 1rem 0;
-  background-color: #fff;
+  background-color: #ADB5B0;
   transition: box-shadow .25s;
   border-radius: 2px;
 }
@@ -4887,7 +4881,7 @@ small {
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
-  color: #ffab40;
+  color: #000000;
   margin-right: 24px;
   transition: color .3s ease;
   text-transform: uppercase;

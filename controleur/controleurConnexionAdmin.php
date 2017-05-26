@@ -2,13 +2,19 @@
 
 include(dirname(__FILE__).'/../modele/modele.php');
 
-$nom = $_POST['nom'];
-$mdp = $_POST['mdp'];
-
-if($nom=="admin" AND $mdp=="123" ){
+if(isset($_COOKIE['nom']) AND isset($_COOKIE['mdp'])){
 	include(dirname(__FILE__).'/../vue/vueAccueilAdmin.php');
 }else{
-	include(dirname(__FILE__).'/../index.php');
+	$nom = $_POST['nom'];
+	$mdp = sha1($_POST['mdp']);
+
+	if($nom=="admin" AND $mdp==sha1("123") ){
+		setcookie("nom", $nom, time()+(60*60*24*30),'/');
+		setcookie("mdp", $mdp, time()+(60*60*24*30),'/');
+		include(dirname(__FILE__).'/../vue/vueAccueilAdmin.php');
+	}else{
+		include(dirname(__FILE__).'/../index.php');
+	}
 }
 
 ?>

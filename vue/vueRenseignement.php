@@ -19,55 +19,52 @@
 <!--Contenu de la page --> 
     <div class="container">
       <div class="section">
-        <p> Veuillez completer le formulaire : </p>
+        <p> Veuillez completer le formulaire : <br/>
+        * : champs obligatoires</p>
         <div class="row">
-          <form method="POST" action="controleurFormulaire.php">
+          <form method="POST" action="controleurFormulaire.php?idHotel=<?php echo $idHotel; ?>&amp;date=<?php echo $date; ?>&amp;numChambre=<?php echo $numChambre; ?>">
           <div class="col s8 m6">
             <div class="row">
               <div class="input-field col s8">
                 <input name="nom" type="text" class="validate">
-                <label for="nom">Votre nom</label>
+                <label for="nom">Votre nom *</label>
               </div>
             </div>
 
             <div class="row">
               <div class="input-field col s8">
                 <input name="prenom" type="text" class="validate">
-                <label for="prenom">Votre prenom</label>
+                <label for="prenom">Votre prenom *</label>
               </div>
             </div>
 
             <div class="row">
               <div class="input-field col s8">
                 <input name="adresse" type="text" class="validate">
-                <label for="adresse">Votre adresse</label>
+                <label for="adresse">Votre adresse *</label>
               </div>
             </div>
 
             <div class="row">
               <div class="input-field col s8">
                 <input name="codePostal" type="text" class="validate">
-                <label for="codePostal">Votre code postal</label>
+                <label for="codePostal">Votre code postal *</label>
               </div>
             </div>
 
             <div class="row">
               <div class="input-field col s8">
                 <input name="ville" type="text" class="validate">
-                <label for="ville">Votre ville</label>
+                <label for="ville">Votre ville *</label>
               </div>
             </div>
 
             <div class="row">
               <div class="input-field col s8">
                 <input name="numTel" type="text" class="validate">
-                <label for="numTel">Votre numero de telephone</label>
+                <label for="numTel">Votre numero de telephone *</label>
               </div>
             </div>
-
-            <input type="hidden" name="numChambre" value="<?php  echo ' '.$numChambre.' ' ?>" />
-            <input type="hidden" name="idHotel" value="<?php  echo ' '.$idHotel.' ' ?>" />
-            <input type="hidden" name="date" value="<?php  echo ' '.$date.' ' ?>" />
             <button class="btn waves-effect waves-light" type="submit" value="valider">Envoyer
               <i class="material-icons right">send</i>
             </button>
@@ -97,4 +94,9 @@
     $('select').material_select();
   });
 </script>
-
+<?php
+if($a==True){ ?>
+<script type="text/javascript">
+     Materialize.toast('Informations fausses !', 4000) // 4000 is the duration of the toast
+</script>
+<?php } ?>

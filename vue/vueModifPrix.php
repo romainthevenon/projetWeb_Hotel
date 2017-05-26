@@ -16,31 +16,41 @@
       <script type="text/javascript" src="../js/materialize.min.js"></script>
 
 		<?php include("headerAdmin.php"); ?>
- 
-    	<div class="container">
-      		<div class="section">
 
-  				<div class="input-field col s12">
-  					<form method="POST" action="controleurChoixHotelAdmin.php">
-					    <select name="select">
-					      	<option value="" disabled selected>Choississez l'hotel</option>
-	                	  <?php while($donnees = $hotels->fetch()){ ?>
-	                    	<option value="<?php echo $donnees['idHotel'] ?>"><?php echo $donnees['nom']; ?></option>
-	                      <?php } ?>
-					    </select>
-					    <label>Choississez l'hotel sur lequel vous voulez consulter les reservations</label>
+		<div class="container">
+		    <div class="section">
+		    	<div class="row">
+		    	  	<form method="POST" action="controleurModifPrixCategorie.php">
+		    	  		<div class="col s8 m6">
+						    <select name="select">
+						      	<option value="" disabled selected>Choississez la catégorie</option>
+		                	  <?php while($donnees = $categorie->fetch()){ ?>
+		                    	<option value="<?php echo $donnees['idCategorie'] ?>"><?php echo $donnees['type'].' ('.$donnees['prix'].' €)'; ?></option>
+		                      <?php } ?>
+						    </select>
+						    <label>Choississez la catégorie</label>
+						    <div class="row">
+             					<div class="input-field col s8">
+									<input name="prixNouv" type="number" class="validate">
+          							<label for="prixNouv">Nouveau prix</label>
+          						</div>
+          					</div>
+          				
 			            <button class="btn waves-effect waves-light" type="submit" value="valider">Envoyer
 			              <i class="material-icons right">send</i>
 			            </button>
-					</form>
-				</div>
-
-			</div>
+			            </div>
+			        </form>
+		    	</div>
+		    </div>
 		</div>
+
+
 
 		<?php include("footer.php"); ?>
 	</body>
 </html>
+
 
 <script type="text/javascript">
   $(document).ready(function() {
@@ -51,6 +61,6 @@
 <?php
 if($a==True){ ?>
 <script type="text/javascript">
-		 Materialize.toast('Reservation supprimée !', 4000) // 4000 is the duration of the toast
+		 Materialize.toast('Prix modifié avec succés !', 4000) // 4000 is the duration of the toast
 </script>
 <?php } ?>

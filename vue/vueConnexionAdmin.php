@@ -22,13 +22,13 @@
                 <div class="connexion">
                     <h2> Connexion</h2>
                         <div class="input-field col s6">
-                            <i class="material-icons prefix">email</i>
+                            <i class="material-icons prefix">supervisor_account</i>
                             <input id="icon_prefix" type="text" name="nom" class="validate" >
                             <label for="icon_prefix">Nom</label>
                         </div>
                         <div class="input-field col s6">
                             <i class="material-icons prefix">vpn_key</i>
-                            <input id="icon_prefix" type="text" name="mdp" class="validate" >
+                            <input id="icon_prefix" type="password" name="mdp" class="validate" >
                             <label for="icon_prefix">Mot de passe</label>
                         </div>
                         <button class="btn waves-effect waves-light" type="submit" value="valider">Connexion
