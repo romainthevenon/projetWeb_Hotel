@@ -12,7 +12,7 @@
 	        <li><a href="../controleur/controleurClientAccueilAdmin.php">Consulter Clients</a></li>
 	      </ul>
 	      <ul class="side-nav" id="mobile-demo">
-	        <li><a href="../controleur/controleurDeconnexionAdmin.php">Se deconnecter</a></li>
+	        <li><a href="../index.php">Se deconnecter</a></li>
 	        <li><a href="../controleur/controleurConnexionAdmin.php">Accueil</a></li>
 	        <li><a href="../controleur/controleurmodifierAccueilAdmin.php">Modifier prix</a></li>
 	        <li><a href="../controleur/controleurReservationAccueilAdmin.php">Consulter Reservations</a></li>

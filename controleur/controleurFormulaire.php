@@ -50,7 +50,7 @@ if(isset($_GET['date']) AND isset($_GET['numChambre']) AND isset($_GET['idHotel'
 		$idReservation =  $bdd->lastInsertId();
 
 		$idCategorie = recupIdCategorie($numChambre);
-		$prix = recupPrix($idCategorie);
+		$prix = recupPrixChambre($idCategorie);
 
 		
 		if(!empty($_POST['occasion'])){
